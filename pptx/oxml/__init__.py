@@ -15,6 +15,8 @@ from defusedxml.ElementTree import XMLParser
 
 from .ns import NamespacePrefixedTag
 
+defusedxml.defuse_stdlib()
+
 
 # configure etree XML parser -------------------------------
 element_class_lookup = etree.ElementNamespaceClassLookup()
