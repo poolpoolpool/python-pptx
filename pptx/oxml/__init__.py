@@ -9,7 +9,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import os
 
-from lxml import etree
+from defusedxml.lxml import etree
 
 from .ns import NamespacePrefixedTag
 
