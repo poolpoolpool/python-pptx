@@ -9,14 +9,16 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import os
 
-from defusedxml.lxml import etree
+from lxml import etree
+
+from defusedxml.ElementTree import XMLParser
 
 from .ns import NamespacePrefixedTag
 
 
 # configure etree XML parser -------------------------------
 element_class_lookup = etree.ElementNamespaceClassLookup()
-oxml_parser = etree.XMLParser(remove_blank_text=True, resolve_entities=False)
+oxml_parser = XMLParser(remove_blank_text=True, resolve_entities=False)
 oxml_parser.set_element_class_lookup(element_class_lookup)
 
 
